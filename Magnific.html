@@ -1,0 +1,29 @@
+<!-- Как подключить -->
+
+
+<link rel="stylesheet" href="https://raw.githubusercontent.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css">
+<script src="http://dimsemenov.com/plugins/magnific-popup/dist/jquery.magnific-popup.min.js?v=1.1.0"></script>
+
+
+
+<div class="gallery-with-popup">
+	<a href="/img/someimg.png"><img src="/img/someimg.png" alt=""></a>
+	<a href="/img/someimg2.png"><img src="/img/someimg2.png" alt=""></a>
+</div>
+
+
+
+<script>
+	$().ready(function(){
+		$('.gallery-with-popup').magnificPopup({
+  			delegate: 'a', // child items selector, by clicking on it popup will open
+  			type: 'image',
+  			gallery:{enabled:true},
+  			zoom: {
+  				enabled: true,
+  				duration: 300,
+  				easing: 'ease-in-out',
+  			}
+		});
+	});
+</script>
